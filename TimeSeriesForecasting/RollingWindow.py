@@ -3,6 +3,8 @@ from numpy import power, concatenate, array, asarray, round, zeros
 
 class RollingWindow(PredictModel):
 
+    #Usually forecast only one step
+
     def __init__(self, ts):
         PredictModel.__init__(self, ts)
         self.pred_ts = self.ts
@@ -19,7 +21,7 @@ class RollingWindow(PredictModel):
         p[0] = f
         return p
 
-    def forecast_exp_smooth(self, n, alpha, span=None):
+    def forecast_exp_smooth(self,alpha,n=1, span=None):
         for i in range(n):
             f = self.expl_smoothing(alpha,span)
             self.pred_ts = concatenate((self.pred_ts, f))

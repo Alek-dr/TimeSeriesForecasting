@@ -15,7 +15,7 @@ n = len(forecast_data)
 #Create an object of rolling window
 rw = RollingWindow(data['Home Sales'].values)
 #Forecast by n steps
-f = rw.forecast_exp_smooth(n,0.1)
+f = rw.forecast_exp_smooth(0.1)
 
 #Make data frame with forecast data
 df = pd.DataFrame(columns=['Forecast'])
