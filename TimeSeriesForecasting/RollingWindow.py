@@ -4,7 +4,7 @@ from numpy import power, concatenate, array, asarray, round, zeros, dot, rint
 
 class RollingWindow(PredictModel):
 
-    #Usually forecast only one step
+    #Little modification of simple exp smoothing
 
     def __init__(self, ts):
         PredictModel.__init__(self, ts)
