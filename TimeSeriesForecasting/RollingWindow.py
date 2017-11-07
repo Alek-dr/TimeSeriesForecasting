@@ -24,7 +24,7 @@ class RollingWindow(PredictModel):
         weights[1] = 1-weights.sum()
         return weights
 
-    def forecast(self,alpha,n=1, span=None):
+    def forecast(self,alpha,n=1):
         weights = zeros(2)
         weights[0] = 1-alpha
         weights[1] = alpha
