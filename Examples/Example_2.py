@@ -15,7 +15,7 @@ n = len(forecast_data)
 #Create an object of rolling window
 lm = LinearModel(data['Home Sales'].values, n=20)
 #Forecast by n steps
-f = lm.forecast(n)
+f = lm.forecast(n,3)
 
 #Make data frame with forecast data
 df = pd.DataFrame(columns=['Forecast'])

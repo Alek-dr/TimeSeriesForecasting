@@ -4,9 +4,10 @@ from numpy.linalg.linalg import dot, inv, eigvals, qr
 from numpy import transpose
 from scipy.linalg import hankel
 from sklearn.metrics import mean_squared_error
-from TimeSeriesForecasting import PredictModel
+from TimeSeriesForecasting.PredictModel import PredictModel
 
 class SSA(PredictModel):
+
     def __init__(self, ts, L=3):
         PredictModel.__init__(self, ts)
         self.L = L
