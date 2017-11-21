@@ -4,7 +4,7 @@ from numpy.linalg.linalg import dot, inv, eigvals, qr
 from numpy import transpose
 from scipy.linalg import hankel
 from sklearn.metrics import mean_squared_error
-from TimeSeriesForecasting.PredictModel import PredictModel
+from time_series_forecasting.predict_model import PredictModel
 
 class SSA(PredictModel):
 

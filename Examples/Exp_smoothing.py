@@ -1,10 +1,12 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from TimeSeriesForecasting.RollingWindow import RollingWindow
+from time_series_forecasting.rolling_window import RollingWindow
 
-data = pd.read_excel('single-family-home-sales.xlsx', parse_dates=[0])
+#Dataset from
+#http://video.udacity-data.com.s3.amazonaws.com/topher/2016/September/57e47a41_single-family-home-sales/single-family-home-sales.xlsx
+
+data = pd.read_excel('datasets/single-family-home-sales.xlsx', parse_dates=[0])
 data.set_index("Month",inplace=True)
-
 
 N = 30
 #Get last date

@@ -1,5 +1,5 @@
-from TimeSeriesForecasting.PredictModel import PredictModel
-from numpy import power, concatenate, array, asarray, round, zeros, dot, rint
+from time_series_forecasting.predict_model import PredictModel
+from numpy import power, concatenate, zeros, dot, rint
 
 
 class RollingWindow(PredictModel):
@@ -38,5 +38,6 @@ class RollingWindow(PredictModel):
         prediction = self.pred_ts[-n:]
         self.pred_ts = self.ts
         return prediction
+
 
 

@@ -1,5 +1,5 @@
-from TimeSeriesForecasting.PredictModel import PredictModel
-from numpy import concatenate, zeros, flipud, fliplr, dot, arange, diag, full_like, transpose, int
+from time_series_forecasting.predict_model import PredictModel
+from numpy import concatenate, zeros, flipud, fliplr, dot, arange, transpose
 from scipy.linalg import hankel, inv
 
 class LinearModel(PredictModel):

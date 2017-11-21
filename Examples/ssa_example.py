@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from time_series_forecasting.linear_model import LinearModel
+from time_series_forecasting.ssa import SSA
 
 #Dataset from
 #http://video.udacity-data.com.s3.amazonaws.com/topher/2016/September/57e47a41_single-family-home-sales/single-family-home-sales.xlsx
@@ -17,9 +17,9 @@ forecast_data = pd.date_range(last_data, periods=N, freq='MS')[1:]
 #n is steps to forecast
 n = len(forecast_data)
 #Create an object of rolling window
-lm = LinearModel(data['Home Sales'].values)
+ssa= SSA(data['Home Sales'].values, L=62)
 #Forecast by n steps
-f = lm.forecast(n=n)
+f = ssa.forecast(n)
 
 #Make data frame with forecast data
 df = pd.DataFrame(columns=['Forecast'])
